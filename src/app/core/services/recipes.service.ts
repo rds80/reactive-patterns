@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Recipe } from '../model/recipe';
 import { environment } from 'src/environments/environment';
 
-const BASE_PATH = environment
+const BASE_PATH = environment.basePath;
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,8 @@ export class RecipesService {
 
   constructor(private httpClient: HttpClient) { }
   getRecipes(): Observable<Recipe[]> {
-    return this.httpClient.get<Recipe[]>(`${BASE_PATH}/recipes`)
-  }
+    return this.httpClient.get<Recipe[]>(
+      environment.basePath + 'recipes'
+      )
+    }
 }

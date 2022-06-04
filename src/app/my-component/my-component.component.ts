@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-my-component',
-  templateUrl: './my-component.component.html',
-  styleUrls: ['./my-component.component.css']
+  selector: '',
+  template: '<html></html>'
 })
 export class MyComponentComponent implements OnInit {
   form!: FormGroup;
